@@ -1,0 +1,7 @@
+@import "shared/variables";
+
+.app-root {
+  &_scroll {
+    margin-top: $size-scroll-header;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'head-of-trainers';
+
+  isScroll:boolean = false;
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    this.isScroll = window.pageYOffset > 0;
+  }
 }

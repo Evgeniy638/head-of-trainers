@@ -11,7 +11,7 @@
   padding: 0 16px;
   box-sizing: border-box;
   position: relative;
-  background: var(--primary-color);
+  background: var(--primary-blue);
   color: white;
 
   &:hover &__overlay {
@@ -33,21 +33,20 @@
   }
 
   &_secondary {
-    background: var(--primary-color);
+    background: var(--primary-blue);
     color: white;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-blue);
   }
 
   &_text-type {
     background: none;
-    color: var(--primary-color);
+    color: var(--primary-blue);
   }
 
   &__overlay {
     border-radius: 24px;
     opacity: 0;
-    z-index: -1;
-    background: var(--primary-color);
+    background: var(--primary-blue);
     position: absolute;
     top: 0;
     left: 0;
@@ -56,6 +55,8 @@
   }
 
   &__image {
-    margin-right: 8px;
+    &_margin-right {
+      margin-right: 8px;
+    }
   }
 }

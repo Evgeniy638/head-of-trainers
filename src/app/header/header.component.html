@@ -1,12 +1,75 @@
-<div>
-  <app-breadcrumbs
-    [data]="dataBreadcrumbs"
-  ></app-breadcrumbs>
+<div class="app-header" [ngClass]="{'app-header_scroll': isScroll}">
+  <div [ngClass]="{'app-header__element_margin-bottom': !isScroll}">
+    <div class="scroll-wrap">
+      <img src="/assets/svg/hamburger.svg" alt="hamburger">
 
-  <app-button
-    srcImage="/assets/svg/scale.svg"
-    text="Запланировать"
-    typeButton="text"
-  ></app-button>
-  header works!
+      <div
+        class=""
+        [ngClass]="{
+          'scroll-wrap__main': true,
+          'scroll-wrap__main_visible': isScroll
+        }"
+      >
+        <div class="app-header__display-none-in-mobile">
+          <app-breadcrumbs
+            [data]="dataBreadcrumbs"
+          ></app-breadcrumbs>
+
+          <div class="title">
+            <img class="title__image title__image_small" src="/assets/svg/planning.svg">
+
+            <h1 class="title__text title__text_small">
+              Планирование
+            </h1>
+          </div>
+        </div>
+
+        <div class="app-header__display-none-in-desktop">
+          <h1 class="scroll-wrap__title">
+            Планирование
+          </h1>
+        </div>
+      </div>
+
+      <div class="app-header__display-none-in-mobile">
+        <app-button
+          srcImage="/assets/svg/add.svg"
+          text="Запланировать"
+          typeButton="text"
+        ></app-button>
+      </div>
+
+      <div class="app-header__display-none-in-desktop">
+        <app-button
+          srcImage="/assets/svg/add.svg"
+          text=""
+          typeButton="text"
+        ></app-button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="app-header__display-none-in-mobile" *ngIf="!isScroll">
+    <div class="app-header__element_margin-bottom">
+      <div class="container">
+        <app-breadcrumbs
+          [data]="dataBreadcrumbs"
+        ></app-breadcrumbs>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-header__display-none-in-mobile" *ngIf="!isScroll">
+    <div class="container">
+      <div class="title">
+        <img class="title__image" src="/assets/svg/planning.svg">
+
+        <h1 class="title__text">
+          Планирование
+        </h1>
+      </div>
+    </div>
+  </div>
+
 </div>
