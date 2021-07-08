@@ -1,5 +1,29 @@
 <div class="app-root" [ngClass]="{'app-root_scroll': isScroll}">
-  <app-header></app-header>
+
+  <ng-template #headerRightDesktop>
+    <app-button
+      srcImage="/assets/svg/add.svg"
+      text="Запланировать"
+      typeButton="text"
+    ></app-button>
+  </ng-template>
+  <ng-template #headerRightMobile>
+    <app-button
+      srcImage="/assets/svg/add.svg"
+      text=""
+      typeButton="text"
+    ></app-button>
+  </ng-template>
+
+  <app-header
+    title="Планирование"
+    srcTitle="/assets/svg/planning.svg"
+    [dataBreadcrumbs]="dataBreadcrumbs"
+    [rightDesktop]="headerRightDesktop"
+    [rightMobile]="headerRightMobile"
+  ></app-header>
+
+
   Hello world!<br>
   Hello world!<br>
   Hello world!<br>

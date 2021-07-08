@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit, TemplateRef} from '@angular/core';
 import {IBreadcrumb} from "../breadcrumbs/breadcrumbs.component";
 
 @Component({
@@ -7,16 +7,11 @@ import {IBreadcrumb} from "../breadcrumbs/breadcrumbs.component";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  dataBreadcrumbs: IBreadcrumb[] = [
-    {
-      text: "Главная",
-      link: "/"
-    },
-    {
-      text: "Планирование",
-      link: "/planning"
-    }
-  ]
+  @Input() dataBreadcrumbs: IBreadcrumb[] = []
+  @Input() title: string = '';
+  @Input() srcTitle: string = '';
+  @Input() rightDesktop?: TemplateRef<any>;
+  @Input() rightMobile?: TemplateRef<any>;
 
   isScroll: boolean = false;
 

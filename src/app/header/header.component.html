@@ -16,35 +16,27 @@
           ></app-breadcrumbs>
 
           <div class="title">
-            <img class="title__image title__image_small" src="/assets/svg/planning.svg">
+            <img class="title__image title__image_small" [src]="srcTitle">
 
             <h1 class="title__text title__text_small">
-              Планирование
+              {{ title }}
             </h1>
           </div>
         </div>
 
         <div class="app-header__display-none-in-desktop">
           <h1 class="scroll-wrap__title">
-            Планирование
+            {{ title }}
           </h1>
         </div>
       </div>
 
-      <div class="app-header__display-none-in-mobile">
-        <app-button
-          srcImage="/assets/svg/add.svg"
-          text="Запланировать"
-          typeButton="text"
-        ></app-button>
+      <div class="app-header__display-none-in-mobile" *ngIf="rightDesktop !== undefined">
+        <ng-component *ngTemplateOutlet="rightDesktop"></ng-component>
       </div>
 
-      <div class="app-header__display-none-in-desktop">
-        <app-button
-          srcImage="/assets/svg/add.svg"
-          text=""
-          typeButton="text"
-        ></app-button>
+      <div class="app-header__display-none-in-desktop" *ngIf="rightMobile !== undefined">
+        <ng-component *ngTemplateOutlet="rightMobile"></ng-component>
       </div>
     </div>
 
@@ -63,10 +55,10 @@
   <div class="app-header__display-none-in-mobile" *ngIf="!isScroll">
     <div class="container">
       <div class="title">
-        <img class="title__image" src="/assets/svg/planning.svg">
+        <img class="title__image" [src]="srcTitle">
 
         <h1 class="title__text">
-          Планирование
+          {{ title }}
         </h1>
       </div>
     </div>
