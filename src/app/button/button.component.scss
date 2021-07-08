@@ -1,0 +1,62 @@
+.app-button {
+  border-radius: 24px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 0 16px;
+  box-sizing: border-box;
+  position: relative;
+  background: var(--primary-blue);
+  color: white;
+
+  &:hover &__overlay {
+    opacity: 0.04;
+  }
+
+  &:focus &__overlay {
+    opacity: 0.14;
+  }
+
+  &:active &__overlay {
+    opacity: 0.16;
+  }
+
+  &_big {
+    height: 48px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &_secondary {
+    background: var(--primary-blue);
+    color: white;
+    border: 2px solid var(--primary-blue);
+  }
+
+  &_text-type {
+    background: none;
+    color: var(--primary-blue);
+  }
+
+  &__overlay {
+    border-radius: 24px;
+    opacity: 0;
+    background: var(--primary-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    &_margin-right {
+      margin-right: 8px;
+    }
+  }
+}

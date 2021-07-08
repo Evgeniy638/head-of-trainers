@@ -1,0 +1,67 @@
+<div class="app-header" [ngClass]="{'app-header_scroll': isScroll}">
+  <div [ngClass]="{'app-header__element_margin-bottom': !isScroll}">
+    <div class="scroll-wrap">
+      <img src="/assets/svg/hamburger.svg" alt="hamburger">
+
+      <div
+        class=""
+        [ngClass]="{
+          'scroll-wrap__main': true,
+          'scroll-wrap__main_visible': isScroll
+        }"
+      >
+        <div class="app-header__display-none-in-mobile">
+          <app-breadcrumbs
+            [data]="dataBreadcrumbs"
+          ></app-breadcrumbs>
+
+          <div class="title">
+            <img class="title__image title__image_small" [src]="srcTitle">
+
+            <h1 class="title__text title__text_small">
+              {{ title }}
+            </h1>
+          </div>
+        </div>
+
+        <div class="app-header__display-none-in-desktop">
+          <h1 class="scroll-wrap__title">
+            {{ title }}
+          </h1>
+        </div>
+      </div>
+
+      <div class="app-header__display-none-in-mobile" *ngIf="rightDesktop !== undefined">
+        <ng-component *ngTemplateOutlet="rightDesktop"></ng-component>
+      </div>
+
+      <div class="app-header__display-none-in-desktop" *ngIf="rightMobile !== undefined">
+        <ng-component *ngTemplateOutlet="rightMobile"></ng-component>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="app-header__display-none-in-mobile" *ngIf="!isScroll">
+    <div class="app-header__element_margin-bottom">
+      <div class="container">
+        <app-breadcrumbs
+          [data]="dataBreadcrumbs"
+        ></app-breadcrumbs>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-header__display-none-in-mobile" *ngIf="!isScroll">
+    <div class="container">
+      <div class="title">
+        <img class="title__image" [src]="srcTitle">
+
+        <h1 class="title__text">
+          {{ title }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,9 @@
+.app-breadcrumbs {
+  color: var(--ligth-theme-secondary);
+  font-size: 12px;
+
+  &__link {
+    color: var(--ligth-theme-secondary);
+    text-decoration: none;
+  }
+}
