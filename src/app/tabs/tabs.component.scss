@@ -1,0 +1,21 @@
+.app-tabs {
+  &__list {
+    display: flex;
+  }
+
+  &__tab {
+    color: var(--ligth-theme-secondary);
+    margin-right: 24px;
+    cursor: pointer;
+    padding-bottom: 8px;
+
+    &_active {
+      color: var(--primary-black);
+      border-bottom: 2px solid var(--primary-blue);
+    }
+  }
+
+  &__divider {
+    margin-top: -1px;
+  }
+}

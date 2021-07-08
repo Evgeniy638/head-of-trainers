@@ -23,8 +23,15 @@
     [rightMobile]="headerRightMobile"
   ></app-header>
 
-
+  <div class="container">
+    <app-tabs
+      [dataTabs]="dataTabs"
+      [activeTabId]="activeTabId"
+      (onChangeActiveTab)="onChangeTabId($event)"
+    ></app-tabs>
+  </div>
   Hello world!<br>
   Hello world!<br>
   Hello world!<br>
+  {{ activeTabId }}
 </div>

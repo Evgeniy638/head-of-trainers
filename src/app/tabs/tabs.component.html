@@ -1,0 +1,18 @@
+<div class="app-tabs">
+  <div class="app-tabs__list">
+    <div
+      *ngFor="let tab of dataTabs"
+      class="app-tabs__tab"
+      [ngClass]="{
+        'app-tabs__tab_active': tab.id === activeTabId
+      }"
+      (click)="onClick(tab.id)"
+    >
+      {{ tab.text }}
+    </div>
+  </div>
+
+  <div class="app-tabs__divider">
+    <div class="divider"></div>
+  </div>
+</div>
