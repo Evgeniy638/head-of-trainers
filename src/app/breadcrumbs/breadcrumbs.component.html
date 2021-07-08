@@ -1,0 +1,10 @@
+<div class="app-breadcrumbs">
+  <span *ngFor="let breadcrumb of data; let i = index">
+    <a class="app-breadcrumbs__link" [routerLink]="breadcrumb.link">
+      {{ breadcrumb.text }}
+    </a>
+    <span *ngIf="data.length - 1 > i">
+      —
+    </span>
+  </span>
+</div>
