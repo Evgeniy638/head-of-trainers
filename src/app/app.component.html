@@ -1,4 +1,4 @@
-<div class="app-root" [ngClass]="{'app-root_scroll': isScroll}">
+<div class="app-root">
 
   <ng-template #headerRightDesktop>
     <app-button
@@ -23,15 +23,17 @@
     [rightMobile]="headerRightMobile"
   ></app-header>
 
-  <div class="container">
-    <app-tabs
-      [dataTabs]="dataTabs"
-      [activeTabId]="activeTabId"
-      (onChangeActiveTab)="onChangeTabId($event)"
-    ></app-tabs>
-  </div>
-  Hello world!<br>
-  Hello world!<br>
-  Hello world!<br>
-  {{ activeTabId }}
+  <main class="app-root__body" [ngClass]="{'app-root__body_scroll': isScroll}">
+    <div class="container">
+      <app-tabs
+        [dataTabs]="dataTabs"
+        [activeTabId]="activeTabId"
+        (onChangeActiveTab)="onChangeTabId($event)"
+      ></app-tabs>
+    </div>
+    Hello world!<br>
+    Hello world!<br>
+    Hello world!<br>
+    {{ activeTabId }}
+  </main>
 </div>
