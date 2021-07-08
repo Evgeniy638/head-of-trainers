@@ -1,0 +1,13 @@
+<button
+  class="app-button"
+  [ngClass]="
+    {
+      'app-button_big': sizeButton == 'big',
+      'app-button_secondary': typeButton == 'secondary',
+      'app-button_text-type': typeButton == 'text'
+    }"
+>
+  <span class="app-button__overlay"></span>
+  <img class="app-button__image" [src]="srcImage">
+  <span>{{ text }}</span>
+</button>
