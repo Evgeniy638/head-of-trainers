@@ -1,0 +1,65 @@
+.app-menu {
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  padding: 8px 0;
+
+  &__item-wrap {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    min-width: 124px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+
+    &_active {
+      color: var(--primary-blue);
+    }
+
+    &_disable {
+      color: var(--ligth-theme-secondary);
+    }
+  }
+
+  &__item-text {
+    flex-grow: 1;
+    margin-right: 16px;
+  }
+
+  &__item-img {
+    width: 18px;
+    height: 18px;
+    display: block;
+
+    &_left {
+      margin-right: 16px;
+    }
+
+    &_right {
+    }
+  }
+
+  &__overlay {
+    background-color: var(--primary-black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &__item-wrap:hover &__overlay {
+    opacity: 0.04;
+  }
+
+  &__item-wrap:focus &__overlay {
+    opacity: 0.12;
+  }
+
+  &__item-wrap:active &__overlay {
+    opacity: 0.16;
+  }
+}

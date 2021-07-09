@@ -1,6 +1,7 @@
 import {Component, HostListener} from '@angular/core';
 import {IBreadcrumb} from "./breadcrumbs/breadcrumbs.component";
 import {ITab, typeTabId} from "./tabs/tabs.component";
+import {IMenuItem, TypeMenuItemId} from "./menu/menu.component";
 
 @Component({
   selector: 'app-root',
@@ -37,6 +38,63 @@ export class AppComponent {
       text: "Индивидуальное"
     }
   ];
+
+  //меню
+  arrActiveId: TypeMenuItemId[] = [1];
+  arrDisableId: TypeMenuItemId[] = [2, 3];
+  dataMenu: IMenuItem[] = [
+    {
+      id: 1,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 2,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 3,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 4,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 5,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 6,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 7,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 8,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    }
+  ]
+  onChangeMenu(event: TypeMenuItemId[]) {
+    this.arrActiveId = event;
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
