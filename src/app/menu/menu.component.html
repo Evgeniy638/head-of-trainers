@@ -1,0 +1,36 @@
+<ul
+  class="app-menu"
+  [style.top]="top"
+  [style.left]="left"
+  [style.bottom]="bottom"
+  [style.right]="right"
+>
+  <li
+    class="app-menu__item-wrap"
+    [ngClass]="{
+      'app-menu__item-wrap_active': arrActiveId.includes(item.id)
+    }"
+    *ngFor="let item of dataMenu; let i = index"
+    (click)="onClick(item.id)"
+  >
+
+    <div class="app-menu__overlay"></div>
+
+    <img
+      class="app-menu__item-img app-menu__item-img_left"
+      [src]="item.srcLeftIcon"
+      [alt]="item.text"
+    >
+
+    <div class="app-menu__item-text">
+      {{item.id}} {{item.text}}
+    </div>
+
+    <img
+      class="app-menu__item-img app-menu__item-img_right"
+      [src]="checkIsMark() && arrActiveId.includes(item.id) ?pathToSvgDone :item.srcRightIcon"
+      [alt]="item.text"
+    >
+
+  </li>
+</ul>

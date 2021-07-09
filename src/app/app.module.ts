@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TabsComponent } from './tabs/tabs.component';
     HeaderComponent,
     ButtonComponent,
     BreadcrumbsComponent,
-    TabsComponent
+    TabsComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
