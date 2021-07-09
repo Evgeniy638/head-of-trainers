@@ -7,7 +7,6 @@ $image-margin-right: 16px;
   width: 120px;
   display: inline-block;
   box-sizing: border-box;
-  cursor: text;
   outline: none;
 
   &:focus {
@@ -51,6 +50,7 @@ $image-margin-right: 16px;
     position: relative;
     font-size: 12px;
     flex-grow: 1;
+    cursor: text;
   }
 
   &__image {

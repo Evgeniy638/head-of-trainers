@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {IonRightImageClick} from "../field/field.component";
 
 @Component({
   selector: 'app-filters',
@@ -11,6 +12,10 @@ export class FiltersComponent implements OnInit {
   onChangeTextField(value: string) {
     this.value = value;
     console.log(value)
+  }
+
+  onRightClick() {
+    console.log("image")
   }
 
   constructor() { }

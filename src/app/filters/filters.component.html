@@ -5,6 +5,8 @@
   ></app-field>
 
   <app-text-field
+    srcRight="/assets/svg/add.svg"
+    [onRightClick]="onRightClick"
     label="Label"
     [value]="value"
     (onChange)="onChangeTextField($event)"

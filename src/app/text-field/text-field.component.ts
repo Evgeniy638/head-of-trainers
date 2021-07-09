@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {IonRightImageClick} from "../field/field.component";
 
 @Component({
   selector: 'app-text-field',
@@ -17,6 +18,7 @@ export class TextFieldComponent implements OnInit {
   @Input() errorMessage?: string = '';
 
   @Input() isDisabled: boolean = false;
+  @Input() onRightClick: IonRightImageClick = ()=>{};
 
   @Input() value: string = '';
   @Output() onChange = new EventEmitter<string>();

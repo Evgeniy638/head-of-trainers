@@ -1,5 +1,9 @@
 import {Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, TemplateRef} from '@angular/core';
 
+export interface IonRightImageClick {
+  (): void;
+}
+
 @Component({
   selector: 'app-field',
   templateUrl: './field.component.html',
@@ -12,6 +16,7 @@ export class FieldComponent implements OnInit {
 
   @Input() srcLeft: string = '';
   @Input() srcRight: string = '';
+  @Input() onRightClick: IonRightImageClick = () => {};
 
   @Input() isFocus: boolean = false;
   @Input() isVisibleElement: boolean = false;
