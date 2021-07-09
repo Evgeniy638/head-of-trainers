@@ -1,0 +1,40 @@
+<div class="app-field" [style.width]="">
+  <div class="app-field__main-wrap">
+    <img
+      *ngIf="srcLeft"
+      [src]="srcLeft"
+      class="app-field__image app-field__image_left"
+    >
+
+    <div>
+      <div class="app-field__label">
+        {{ label }}
+      </div>
+
+      <div class="app-field__main-block">
+        <p *ngIf="!isActive" class="app-field__input-label">
+          {{ label }}
+        </p>
+
+        <input
+          class="app-field__input"
+          *ngIf="isActive && isString(value)"
+          [value]="value"
+          (change)="onChangeValue($event)"
+        >
+      </div>
+    </div>
+
+    <img
+      *ngIf="srcRight"
+      [src]="srcRight"
+      class="app-field__image app-field__image_right"
+    >
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="app-field__error-message">
+    {{ errorMessage }}
+  </div>
+</div>

@@ -1,0 +1,69 @@
+$size-image: 18px;
+$image-margin-right: 16px;
+
+.app-field {
+  padding-top: 8px;
+  min-width: 120px;
+  display: inline-flex;
+  flex-direction: column;
+
+  &:hover .divider {
+    background-color: var(--ligth-theme-placeholder);
+  }
+
+  &_focused &__label {
+    color: var(--primary-blue);
+  }
+
+  &_focused .divider {
+    background-color: var(--primary-blue);
+  }
+
+  &__label {
+    font-size: 10px;
+    margin-bottom: 4px;
+    color: var(--ligth-theme-secondary);
+  }
+
+  &__input {
+    font-size: 12px;
+    line-height: 16px;
+    outline: none;
+    border: none;
+  }
+
+  &__input-label {
+    color: var(--ligth-theme-placeholder);
+  }
+
+  &__main-wrap {
+    font-size: 12px;
+    display: flex;
+    margin-bottom: 6px;
+  }
+
+  &__main-block {
+    font-size: 12px;
+    flex-grow: 1;
+  }
+
+  &__image {
+    font-size: 12px;
+    display: block;
+    width: $size-image;
+    height: $size-image;
+
+    &_left {
+      margin-right: $image-margin-right;
+    }
+
+    &_right {
+      margin-left: 16px;
+    }
+  }
+
+  &__error-message {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+}

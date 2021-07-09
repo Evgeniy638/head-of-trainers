@@ -8,6 +8,8 @@ import { ButtonComponent } from './button/button.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { MenuComponent } from './menu/menu.component';
+import { FieldComponent } from './field/field.component';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MenuComponent } from './menu/menu.component';
     ButtonComponent,
     BreadcrumbsComponent,
     TabsComponent,
-    MenuComponent
+    MenuComponent,
+    FieldComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
