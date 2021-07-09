@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'app-field',
@@ -8,31 +8,29 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class FieldComponent implements OnInit {
   @Input() width?: string;
 
-  @Input() value: string = '';
   @Input() label: string = '';
 
   @Input() srcLeft: string = '';
   @Input() srcRight: string = '';
 
-  @Input() isActive: boolean = false;
+  @Input() isFocus: boolean = false;
+  @Input() isVisibleElement: boolean = false;
 
   @Input() isError: boolean = false;
   @Input() errorMessage?: string;
 
   @Input() isDisabled: boolean = false;
 
-  @Output() onChange = new EventEmitter<string>();
+  @Input() element?: TemplateRef<any>;
 
-  onChangeValue(event: Event) {
-    const input = event.target as HTMLInputElement;
-    this.onChange.emit(input.value);
+  constructor() {
   }
 
-  isString(value: any): boolean {
-    return typeof value === "string";
-  }
+  @Output() onFocus = new EventEmitter<boolean>();
 
-  constructor() { }
+  onFocusField () {
+    this.onFocus.emit(true);
+  }
 
   ngOnInit(): void {
   }

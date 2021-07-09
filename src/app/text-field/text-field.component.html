@@ -1,0 +1,23 @@
+<ng-template #input>
+  <input
+    class="app-text-field__input"
+    [value]="value"
+    (input)="onChangeValue($event)"
+    (blur)="onBlur()"
+    autofocus
+  >
+</ng-template>
+
+<app-field
+  [width]="width"
+  [label]="label"
+  [srcLeft]="srcLeft"
+  [srcRight]="srcRight"
+  [isError]="isError"
+  [isDisabled]="isDisabled"
+  [errorMessage]="errorMessage"
+  [isFocus]="isFocus"
+  [isVisibleElement]="isVisibleElement()"
+  [element]="input"
+  (onFocus)="onFocus()"
+></app-field>

@@ -10,6 +10,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { MenuComponent } from './menu/menu.component';
 import { FieldComponent } from './field/field.component';
 import { FiltersComponent } from './filters/filters.component';
+import { TextFieldComponent } from './text-field/text-field.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FiltersComponent } from './filters/filters.component';
     TabsComponent,
     MenuComponent,
     FieldComponent,
-    FiltersComponent
+    FiltersComponent,
+    TextFieldComponent
   ],
   imports: [
     BrowserModule,

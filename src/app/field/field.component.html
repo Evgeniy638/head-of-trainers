@@ -1,4 +1,11 @@
-<div class="app-field" [style.width]="">
+<div
+  class="app-field"
+  [style.width]="width"
+  (click)="onFocusField()"
+  [ngClass]="{
+    'app-field_focus': isFocus
+  }"
+>
   <div class="app-field__main-wrap">
     <img
       *ngIf="srcLeft"
@@ -6,23 +13,24 @@
       class="app-field__image app-field__image_left"
     >
 
-    <div>
-      <div class="app-field__label">
+    <div class="app-field__main-block">
+      <div
+        class="app-field__label app-field__label_up"
+        *ngIf="isVisibleElement"
+        [ngClass]="{
+          'app-field__label_focus': isFocus
+        }"
+      >
         {{ label }}
       </div>
 
-      <div class="app-field__main-block">
-        <p *ngIf="!isActive" class="app-field__input-label">
+      <ng-template #refLabel>
+        <p class="app-field__label_down app-field__label">
           {{ label }}
         </p>
+      </ng-template>
 
-        <input
-          class="app-field__input"
-          *ngIf="isActive && isString(value)"
-          [value]="value"
-          (change)="onChangeValue($event)"
-        >
-      </div>
+      <ng-component *ngTemplateOutlet="isVisibleElement && element ?element :refLabel"></ng-component>
     </div>
 
     <img

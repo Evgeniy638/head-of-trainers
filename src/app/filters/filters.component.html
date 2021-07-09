@@ -1,7 +1,13 @@
-<div>
+<div class="app-filters">
   filters works!
   <app-field
-    value="Привет"
     label="Label"
   ></app-field>
+
+  <app-text-field
+    label="Label"
+    [value]="value"
+    (onChange)="onChangeTextField($event)"
+  >
+  </app-text-field>
 </div>
