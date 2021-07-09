@@ -19,11 +19,10 @@ export class FiltersComponent implements OnInit {
     console.log("image")
   }
 
-  arrActiveId: TypeMenuItemId[] = [1];
   dataMenu: IMenuItem[] = [
     {
       id: 1,
-      text: "Привет",
+      text: "Привет Привет",
       srcLeftIcon: "/assets/svg/add.svg",
       srcRightIcon: "/assets/svg/add.svg",
     },
@@ -40,8 +39,6 @@ export class FiltersComponent implements OnInit {
       srcRightIcon: "/assets/svg/add.svg",
     }
     ]
-
-  valueDown: string = '';
 
 
   constructor() { }

@@ -27,6 +27,7 @@
   &__item-text {
     flex-grow: 1;
     margin-right: 16px;
+    white-space: nowrap;
   }
 
   &__item-img {
