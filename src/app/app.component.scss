@@ -1,7 +1,22 @@
 @import "shared/variables";
 
+$desktop-body-margin-top: 42px;
+$mobile-body-margin-top: 10px;
+
 .app-root {
-  &_scroll {
-    margin-top: $size-scroll-header;
+  &__body {
+    margin-top: $desktop-body-margin-top;
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: $mobile-body-margin-top;
+    }
+
+    &_scroll {
+      margin-top: $size-scroll-header + $desktop-body-margin-top;
+
+      @media (max-width: $max-mobile-width) {
+        margin-top: $size-scroll-header + $mobile-body-margin-top;
+      }
+    }
   }
 }

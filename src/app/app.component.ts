@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {IBreadcrumb} from "./breadcrumbs/breadcrumbs.component";
+import {ITab, typeTabId} from "./tabs/tabs.component";
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,21 @@ export class AppComponent {
   ]
 
   isScroll:boolean = false;
+
+  activeTabId: typeTabId = 1;
+  onChangeTabId(id: typeTabId) {
+    this.activeTabId = id;
+  }
+  dataTabs: ITab[] = [
+    {
+      id: 1,
+      text: "Групповое"
+    },
+    {
+      id: 2,
+      text: "Индивидуальное"
+    }
+  ];
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
