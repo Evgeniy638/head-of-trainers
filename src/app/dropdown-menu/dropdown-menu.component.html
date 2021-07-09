@@ -1,0 +1,36 @@
+<ng-template #input>
+  <input
+    class="app-text-field__input"
+    [value]="value"
+    (input)="onChangeValue($event)"
+    autofocus
+  >
+</ng-template>
+
+<ng-template #menu>
+  <app-menu
+    [arrActiveId]="arrActiveId"
+    [arrDisableId]="arrDisableId"
+    [dataMenu]="dataMenu"
+    [isMark]="isMark"
+    (onChangeActiveId)="onChangeMenu($event)"
+  ></app-menu>
+</ng-template>
+
+<app-field
+  [width]="width"
+  [label]="label"
+  [srcLeft]="srcLeft"
+  [srcRight]="srcRight"
+  [isError]="isError"
+  [isDisabled]="isDisabled"
+  [errorMessage]="errorMessage"
+  [isFocus]="isFocus"
+  [isVisibleElement]="isVisibleElement()"
+
+  [element]="input"
+  [downElement]="menu"
+
+  (onFocus)="onFocus()"
+  [onRightClick]="onRightClick"
+></app-field>

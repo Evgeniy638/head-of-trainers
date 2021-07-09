@@ -46,4 +46,8 @@
   <div class="app-field__error-message">
     {{ errorMessage }}
   </div>
+
+  <div class="app-field__down-element" *ngIf="downElement && isFocus">
+    <ng-component *ngTemplateOutlet="downElement"></ng-component>
+  </div>
 </div>

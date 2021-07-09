@@ -12,4 +12,13 @@
     (onChange)="onChangeTextField($event)"
   >
   </app-text-field>
+
+  <app-dropdown-menu
+    srcRight="/assets/svg/add.svg"
+    [onRightClick]="onRightClick"
+    label="Label"
+    [value]="value"
+    (onChange)="onChangeTextField($event)"
+    [dataMenu]="dataMenu"
+  ></app-dropdown-menu>
 </div>

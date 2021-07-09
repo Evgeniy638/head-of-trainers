@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IonRightImageClick} from "../field/field.component";
+import {IMenuItem, TypeMenuItemId} from "../menu/menu.component";
 
 @Component({
   selector: 'app-filters',
@@ -17,6 +18,31 @@ export class FiltersComponent implements OnInit {
   onRightClick() {
     console.log("image")
   }
+
+  arrActiveId: TypeMenuItemId[] = [1];
+  dataMenu: IMenuItem[] = [
+    {
+      id: 1,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 2,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    },
+    {
+      id: 3,
+      text: "Привет",
+      srcLeftIcon: "/assets/svg/add.svg",
+      srcRightIcon: "/assets/svg/add.svg",
+    }
+    ]
+
+  valueDown: string = '';
+
 
   constructor() { }
 

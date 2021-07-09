@@ -28,6 +28,8 @@ export class FieldComponent implements OnInit {
 
   @Input() element?: TemplateRef<any>;
 
+  @Input() downElement?: TemplateRef<any>;
+
   constructor() {
   }
 

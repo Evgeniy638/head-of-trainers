@@ -74,5 +74,7 @@ $image-margin-right: 16px;
     font-size: 10px;
   }
 
-
+  &__down-element {
+    position: relative;
+  }
 }

@@ -1,0 +1,12 @@
+.app-text-field__input {
+  font-size: 12px;
+  line-height: 16px;
+  outline: none;
+  border: none;
+  width: 100%;
+  display: block;
+
+  &_hide {
+    display: none;
+  }
+}
