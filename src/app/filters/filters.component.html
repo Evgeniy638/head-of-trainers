@@ -5,7 +5,7 @@
 
     <div class="app-filters__element app-filters__element_mobile-display-none">
       <app-text-field
-        srcLeft="/assets/svg/search.svg"
+        srcLeft="assets/svg/search.svg"
         width="100%"
         label="Поиск"
         [value]="value"
@@ -15,8 +15,8 @@
 
     <div class="app-filters__element app-filters__element_desktop-display-none">
       <app-text-field
-        srcLeft="/assets/svg/search.svg"
-        srcRight="/assets/svg/scale-black.svg"
+        srcLeft="assets/svg/search.svg"
+        srcRight="assets/svg/scale-black.svg"
         [onRightClick]="openSetting.bind(this)"
         width="100%"
         label="Поиск"
@@ -27,7 +27,7 @@
 
     <div class="app-filters__element">
       <app-dropdown-menu
-        srcRight="/assets/svg/arrow-down.svg"
+        srcRight="assets/svg/arrow-down.svg"
         label="Программа"
         width="100%"
         [arrActiveId]="tableService.activeIdProgram"
@@ -38,7 +38,7 @@
 
     <div class="app-filters__element">
       <app-dropdown-menu
-        srcRight="/assets/svg/arrow-down.svg"
+        srcRight="assets/svg/arrow-down.svg"
         label="Период"
         width="100%"
         [arrActiveId]="tableService.activeIdPeriod"
@@ -49,7 +49,7 @@
 
     <div class="app-filters__element">
       <app-dropdown-menu
-        srcRight="/assets/svg/arrow-down.svg"
+        srcRight="assets/svg/arrow-down.svg"
         label="Статус"
         width="100%"
         [arrActiveId]="tableService.activeIdStatus"
@@ -60,7 +60,7 @@
 
     <div class="app-filters__element app-filters__element_desktop-display-none">
       <app-dropdown-menu
-        srcRight="/assets/svg/arrow-down.svg"
+        srcRight="assets/svg/arrow-down.svg"
         label="Сортировка"
         width="100%"
         [arrActiveId]="arrActiveId"
@@ -80,7 +80,7 @@
       sizeButton="normal"
       typeButton="text"
       text="Настроить фильтр"
-      srcImage="/assets/svg/scale.svg"
+      srcImage="assets/svg/scale.svg"
       (click)="openSetting()"
     ></app-button>
 
@@ -88,7 +88,7 @@
       sizeButton="normal"
       typeButton="text"
       text="Сбросить"
-      srcImage="/assets/svg/close.svg"
+      srcImage="assets/svg/close.svg"
       color="#0000008A"
     ></app-button>
   </div>

@@ -33,7 +33,7 @@ export class MenuComponent implements OnInit {
     return this.isMark && this.isMark !== "false";
   }
 
-  pathToSvgDone: string = '/assets/svg/done.svg';
+  pathToSvgDone: string = 'assets/svg/done.svg';
 
   onClick(id: TypeMenuItemId) {
     if (this.typeMenu === 'single') {
