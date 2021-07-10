@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {IonRightImageClick} from "../field/field.component";
 import {IMenuItem, TypeMenuItemId} from "../menu/menu.component";
 
 @Component({
@@ -13,6 +12,12 @@ export class FiltersComponent implements OnInit {
   onChangeTextField(value: string) {
     this.value = value;
     console.log(value)
+  }
+
+  arrActiveId: TypeMenuItemId[] = [1];
+
+  onChangeDropDown(arrId: TypeMenuItemId[]) {
+    this.arrActiveId = arrId;
   }
 
   onRightClick() {

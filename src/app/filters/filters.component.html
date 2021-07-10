@@ -1,24 +1,22 @@
 <div class="app-filters">
-  filters works!
-  <app-field
-    label="Label"
-  ></app-field>
-
-  <app-text-field
-    srcRight="/assets/svg/add.svg"
-    [onRightClick]="onRightClick"
-    label="Label"
-    [value]="value"
-    (onChange)="onChangeTextField($event)"
-  >
-  </app-text-field>
+  <div class="app-filters__element">
+    <app-text-field
+      srcLeft="/assets/svg/search.svg"
+      width="166px"
+      label="Поиск"
+      [value]="value"
+      (onChange)="onChangeTextField($event)"
+    >
+    </app-text-field>
+  </div>
 
   <app-dropdown-menu
     srcRight="/assets/svg/add.svg"
     [onRightClick]="onRightClick"
     label="Label"
-    [value]="value"
-    (onChange)="onChangeTextField($event)"
+    width="100%"
+    [arrActiveId]="arrActiveId"
+    (onChange)="onChangeDropDown($event)"
     [dataMenu]="dataMenu"
   ></app-dropdown-menu>
 </div>

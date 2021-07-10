@@ -2,4 +2,12 @@
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
+
+  &__element {
+    margin-right: 30px;
+
+    &_display-none {
+      display: none;
+    }
+  }
 }

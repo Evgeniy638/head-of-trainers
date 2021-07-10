@@ -35,8 +35,7 @@ export class DropdownMenuComponent implements OnInit {
   @Input() isDisabled: boolean = false;
   @Input() onRightClick: IonRightImageClick = ()=>{};
 
-  @Input() value: string = '';
-  @Output() onChange = new EventEmitter<string>();
+  @Output() onChange = new EventEmitter<TypeMenuItemId[]>();
 
   isFocus: boolean = false;
 
@@ -59,18 +58,25 @@ export class DropdownMenuComponent implements OnInit {
   }
 
   @Input() typeMenu: TypeMenu = 'single';
-  arrActiveId: TypeMenuItemId[] = [];
+  @Input() arrActiveId: TypeMenuItemId[] = [];
   @Input() arrDisableId: TypeMenuItemId[] = [];
   @Input() dataMenu: IMenuItem[] = [];
   @Input() isMark: boolean | "false" | "true" = false;
 
   onChangeMenu(event: TypeMenuItemId[]) {
-    this.arrActiveId = event;
-    const item: IMenuItem | undefined = this.dataMenu.find(item => item.id === this.arrActiveId[0]);
-    if (item) this.onChange.emit(item.text);
+    this.onChange.emit(event);
   }
 
   @ViewChild('menu') menuElement?: TemplateRef<any>;
+
+  get value(): string {
+    if (this.arrActiveId.length === 0) {
+      return '';
+    }
+
+    const item: IMenuItem | undefined = this.dataMenu.find(item => item.id === this.arrActiveId[0]);
+    return item?.text || '';
+  }
 
   constructor(private eRef: ElementRef) { }
 
