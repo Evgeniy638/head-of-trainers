@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {FilterSettingService} from "../shared/filter-setting.service";
 
 @Component({
   selector: 'app-filter-setting',
@@ -6,11 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./filter-setting.component.scss']
 })
 export class FilterSettingComponent implements OnInit {
-  @Input() isVisible: boolean = false;
-  @Output() onClose = new EventEmitter<void>();
-  @Output() onDone = new EventEmitter<void>();
-
-  constructor() { }
+  constructor(public filterSettingService: FilterSettingService) { }
 
   ngOnInit(): void {
   }

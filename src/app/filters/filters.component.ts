@@ -22,8 +22,8 @@ export class FiltersComponent implements OnInit {
     this.arrActiveId = arrId;
   }
 
-  onRightClick() {
-    console.log("image")
+  openSetting() {
+    this.filterSettingService.changeVisible(true);
   }
 
   dataMenu: IMenuItem[] = [

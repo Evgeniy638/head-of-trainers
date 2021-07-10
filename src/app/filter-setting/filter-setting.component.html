@@ -1,16 +1,20 @@
-<div *ngIf="isVisible" class="blackout"></div>
+<div
+  *ngIf="filterSettingService.isVisible()"
+  class="blackout"
+  (click)="filterSettingService.changeVisible(false)"
+></div>
 
-<div *ngIf="isVisible" class="app-filter-setting">
+<div *ngIf="filterSettingService.isVisible()" class="app-filter-setting">
   <div class="app-filter-setting__header header">
     <h2 class="header__title">
       Настройка фильтра
     </h2>
 
-    <div class="header__image-wrap" (click)="onDone.emit()">
+    <div class="header__image-wrap" (click)="filterSettingService.changeVisible(false)">
       <img class="header__image" src="/assets/svg/done.svg" alt="done">
     </div>
 
-    <div class="header__image-wrap" (click)="onClose.emit()">
+    <div class="header__image-wrap" (click)="filterSettingService.changeVisible(false)">
       <img class="header__image" src="/assets/svg/close.svg" alt="close">
     </div>
   </div>
@@ -21,9 +25,14 @@
         Системные поля
       </h3>
 
-      <div class="main-container__element">
+      <div
+        class="main-container__element"
+        *ngFor="let data of filterSettingService.systemCheckbox"
+      >
         <app-checkbox
-          text="Поиск"
+          [isChecked]="data.isChecked"
+          [text]="data.text"
+          (onChange)="filterSettingService.onChangeCheckedCreator(filterSettingService.systemCheckbox, data.id)($event)"
         ></app-checkbox>
       </div>
 
@@ -34,12 +43,17 @@
         Дополнительные поля
       </h3>
 
-      <div class="main-container__element">
+      <div
+        class="main-container__element"
+        *ngFor="let data of filterSettingService.additionalCheckbox"
+      >
         <app-checkbox
-          text="Поиск"
+          [isChecked]="data.isChecked"
+          [text]="data.text"
+          (onChange)="filterSettingService.onChangeCheckedCreator(filterSettingService.additionalCheckbox, data.id)($event)"
         ></app-checkbox>
       </div>
-      
+
     </div>
   </div>
 
