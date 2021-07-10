@@ -22,21 +22,15 @@ export class FiltersComponent implements OnInit {
   dataMenu: IMenuItem[] = [
     {
       id: 1,
-      text: "Привет Привет",
-      srcLeftIcon: "/assets/svg/add.svg",
-      srcRightIcon: "/assets/svg/add.svg",
+      text: "Привет Привет"
     },
     {
       id: 2,
-      text: "Привет",
-      srcLeftIcon: "/assets/svg/add.svg",
-      srcRightIcon: "/assets/svg/add.svg",
+      text: "Привет"
     },
     {
       id: 3,
-      text: "Привет",
-      srcLeftIcon: "/assets/svg/add.svg",
-      srcRightIcon: "/assets/svg/add.svg",
+      text: "Привет"
     }
     ]
 

@@ -12,6 +12,8 @@ import { FieldComponent } from './field/field.component';
 import { FiltersComponent } from './filters/filters.component';
 import { TextFieldComponent } from './text-field/text-field.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { TableComponent } from './table/table.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
     FieldComponent,
     FiltersComponent,
     TextFieldComponent,
-    DropdownMenuComponent
+    DropdownMenuComponent,
+    TableComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

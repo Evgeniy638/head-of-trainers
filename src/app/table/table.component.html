@@ -1,0 +1,50 @@
+<div class="app-table">
+  <div
+    class="app-table__row"
+  >
+    <div
+      class="app-table__cell app-table__cell_head"
+      [ngClass]="{
+        'app-table__cell_flex-grow': settingsColumns[i].isFlexGrow,
+        'app-table__cell_mobile-display-none': settingsColumns[i].isNoneDisplayInMobile
+      }"
+      *ngFor="let column of settingsColumns; let i = index"
+    >
+      {{ column.name }}
+    </div>
+
+    <div class="app-table__cell app-table__cell_setting"></div>
+  </div>
+
+  <div
+    class="app-table__row"
+    *ngFor="let row of dataTable"
+  >
+    <div class="app-table__row-overlay"></div>
+
+    <div
+      class="app-table__cell"
+      [ngClass]="{
+        'app-table__cell_flex-grow': settingsColumns[i].isFlexGrow,
+        'app-table__cell_percent': settingsColumns[i].type === 'percent',
+        'app-table__cell_mobile-display-none': settingsColumns[i].isNoneDisplayInMobile
+      }"
+      *ngFor="let cell of row; let i = index"
+    >
+      <img
+        *ngIf="settingsColumns[i].type === 'percent'"
+        src="/assets/svg/process.svg"
+        alt="process"
+      >
+      {{ cell }}
+      <span *ngIf="settingsColumns[i].type === 'percent'">%</span>
+    </div>
+
+    <div class="app-table__cell app-table__cell_setting app-table__cell_mobile-display-none">
+      <div class="setting">
+        <img class="setting__image" src="/assets/svg/vertically.svg" alt="setting"/>
+        <div class="setting__overlay"></div>
+      </div>
+    </div>
+  </div>
+</div>
