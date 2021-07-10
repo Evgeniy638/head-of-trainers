@@ -27,9 +27,9 @@
         srcRight="/assets/svg/arrow-down.svg"
         label="Программа"
         width="100%"
-        [arrActiveId]="arrActiveId"
-        (onChange)="onChangeDropDown($event)"
-        [dataMenu]="dataMenu"
+        [arrActiveId]="tableService.activeIdProgram"
+        (onChange)="tableService.onChangeProgram($event)"
+        [dataMenu]="tableService.dataProgram"
       ></app-dropdown-menu>
     </div>
 
@@ -38,9 +38,9 @@
         srcRight="/assets/svg/arrow-down.svg"
         label="Период"
         width="100%"
-        [arrActiveId]="arrActiveId"
-        (onChange)="onChangeDropDown($event)"
-        [dataMenu]="dataMenu"
+        [arrActiveId]="tableService.activeIdPeriod"
+        (onChange)="tableService.onChangePeriod($event)"
+        [dataMenu]="tableService.dataPeriod"
       ></app-dropdown-menu>
     </div>
 
@@ -49,9 +49,9 @@
         srcRight="/assets/svg/arrow-down.svg"
         label="Статус"
         width="100%"
-        [arrActiveId]="arrActiveId"
-        (onChange)="onChangeDropDown($event)"
-        [dataMenu]="dataMenu"
+        [arrActiveId]="tableService.activeIdStatus"
+        (onChange)="tableService.onChangeStatus($event)"
+        [dataMenu]="tableService.dataStatus"
       ></app-dropdown-menu>
     </div>
 
