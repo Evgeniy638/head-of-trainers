@@ -2,6 +2,7 @@
 
 .app-header {
   background-color: white;
+  z-index: 1;
 
   &_scroll {
     position: fixed;
