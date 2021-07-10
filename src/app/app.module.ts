@@ -14,6 +14,8 @@ import { TextFieldComponent } from './text-field/text-field.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { TableComponent } from './table/table.component';
 import { MainComponent } from './main/main.component';
+import { FilterSettingComponent } from './filter-setting/filter-setting.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MainComponent } from './main/main.component';
     TextFieldComponent,
     DropdownMenuComponent,
     TableComponent,
-    MainComponent
+    MainComponent,
+    FilterSettingComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,

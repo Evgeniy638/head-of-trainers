@@ -1,0 +1,36 @@
+<div *ngIf="isVisible" class="blackout"></div>
+
+<div *ngIf="isVisible" class="app-filter-setting">
+  <div class="app-filter-setting__header header">
+    <h2 class="header__title">
+      Настройка фильтра
+    </h2>
+
+    <div class="header__image-wrap" (click)="onDone.emit()">
+      <img class="header__image" src="/assets/svg/done.svg" alt="done">
+    </div>
+
+    <div class="header__image-wrap" (click)="onClose.emit()">
+      <img class="header__image" src="/assets/svg/close.svg" alt="close">
+    </div>
+  </div>
+
+  <div class="app-filter-setting__main">
+    <div class="main-container">
+      <h3 class="main-container__title">
+        Системные поля
+      </h3>
+
+
+    </div>
+
+    <div class="main-container">
+      <h3 class="main-container__title">
+        Дополнительные поля
+      </h3>
+
+
+    </div>
+  </div>
+
+</div>

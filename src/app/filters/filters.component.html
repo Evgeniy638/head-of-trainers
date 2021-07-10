@@ -1,3 +1,8 @@
+<app-filter-setting
+  [isVisible]="filterSettingService.isVisible()"
+  (onClose)="filterSettingService.changeVisible(false)"
+  (onDone)="filterSettingService.changeVisible(false)"
+></app-filter-setting>
 <div class="app-filters">
   <div class="app-filters__main">
 

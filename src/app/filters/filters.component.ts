@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {IMenuItem, TypeMenuItemId} from "../menu/menu.component";
 import {TableService} from "../shared/table.service";
+import {FilterSettingService} from "../shared/filter-setting.service";
 
 @Component({
   selector: 'app-filters',
@@ -41,7 +42,7 @@ export class FiltersComponent implements OnInit {
     ]
 
 
-  constructor(public tableService: TableService) { }
+  constructor(public tableService: TableService, public filterSettingService: FilterSettingService) { }
 
   ngOnInit(): void {
   }
