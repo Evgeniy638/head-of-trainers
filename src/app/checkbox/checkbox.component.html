@@ -1,0 +1,11 @@
+<div class="app-checkbox" (click)="onChange.emit(!isChecked)">
+  <div
+    class="app-checkbox__checker"
+    [ngClass]="{
+      'app-checkbox__checker_check': isChecked
+    }"
+  ></div>
+  <div class="app-checkbox__text">
+    {{ text }}
+  </div>
+</div>

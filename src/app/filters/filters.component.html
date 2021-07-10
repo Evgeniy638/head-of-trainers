@@ -1,3 +1,5 @@
+<app-filter-setting></app-filter-setting>
+
 <div class="app-filters">
   <div class="app-filters__main">
 
@@ -15,6 +17,7 @@
       <app-text-field
         srcLeft="/assets/svg/search.svg"
         srcRight="/assets/svg/scale-black.svg"
+        [onRightClick]="openSetting.bind(this)"
         width="100%"
         label="Поиск"
         [value]="value"
@@ -78,6 +81,7 @@
       typeButton="text"
       text="Настроить фильтр"
       srcImage="/assets/svg/scale.svg"
+      (click)="openSetting()"
     ></app-button>
 
     <app-button

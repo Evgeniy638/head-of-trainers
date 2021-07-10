@@ -1,0 +1,21 @@
+.app-checkbox {
+  display: flex;
+  height: 36px;
+  align-items: center;
+
+  &__checker {
+    background-color: var(--primary-gray);
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+
+    &_check {
+      background-image: url("/assets/svg/done.svg");
+    }
+  }
+
+  &__text {
+    margin-left: 16px;
+    font-size: 12px;
+  }
+}
