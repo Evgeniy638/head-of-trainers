@@ -31,17 +31,15 @@
         (onChangeActiveTab)="onChangeTabId($event)"
       ></app-tabs>
     </div>
-    Hello world!<br>
-    <app-menu
-      [arrActiveId]="arrActiveId"
-      [arrDisableId]="arrDisableId"
-      [dataMenu]="dataMenu"
-      typeMenu="multi"
-      isMark="true"
-      top="9px"
-      right="100px"
-      (onChangeActiveId)="onChangeMenu($event)"
-    ></app-menu>
-    <app-filters></app-filters>
+
+    <div class="app-root__filter container">
+      <app-filters></app-filters>
+    </div>
+
+    <div class="app-root__table">
+      <div class="container">
+        <app-main></app-main>
+      </div>
+    </div>
   </main>
 </div>

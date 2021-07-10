@@ -14,6 +14,15 @@ export class ButtonComponent implements OnInit {
   @Input() srcImage: string = '';
   @Input() typeButton: TypeButton = 'primary';
   @Input() sizeButton: SizeButton = 'normal';
+  @Input() color: string = "#1071FF";
+
+  getBackground() {
+    return this.typeButton === 'primary' ?this.color :'white';
+  }
+
+  getColor() {
+    return this.typeButton === 'primary' ?'white' :this.color;
+  }
 
   constructor() { }
 

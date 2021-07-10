@@ -1,24 +1,91 @@
 <div class="app-filters">
-  filters works!
-  <app-field
-    label="Label"
-  ></app-field>
+  <div class="app-filters__main">
 
-  <app-text-field
-    srcRight="/assets/svg/add.svg"
-    [onRightClick]="onRightClick"
-    label="Label"
-    [value]="value"
-    (onChange)="onChangeTextField($event)"
-  >
-  </app-text-field>
+    <div class="app-filters__element app-filters__element_mobile-display-none">
+      <app-text-field
+        srcLeft="/assets/svg/search.svg"
+        width="100%"
+        label="Поиск"
+        [value]="value"
+        (onChange)="onChangeTextField($event)"
+      ></app-text-field>
+    </div>
 
-  <app-dropdown-menu
-    srcRight="/assets/svg/add.svg"
-    [onRightClick]="onRightClick"
-    label="Label"
-    [value]="value"
-    (onChange)="onChangeTextField($event)"
-    [dataMenu]="dataMenu"
-  ></app-dropdown-menu>
+    <div class="app-filters__element app-filters__element_desktop-display-none">
+      <app-text-field
+        srcLeft="/assets/svg/search.svg"
+        srcRight="/assets/svg/scale-black.svg"
+        width="100%"
+        label="Поиск"
+        [value]="value"
+        (onChange)="onChangeTextField($event)"
+      ></app-text-field>
+    </div>
+
+    <div class="app-filters__element">
+      <app-dropdown-menu
+        srcRight="/assets/svg/arrow-down.svg"
+        label="Программа"
+        width="100%"
+        [arrActiveId]="tableService.activeIdProgram"
+        (onChange)="tableService.onChangeProgram($event)"
+        [dataMenu]="tableService.dataProgram"
+      ></app-dropdown-menu>
+    </div>
+
+    <div class="app-filters__element">
+      <app-dropdown-menu
+        srcRight="/assets/svg/arrow-down.svg"
+        label="Период"
+        width="100%"
+        [arrActiveId]="tableService.activeIdPeriod"
+        (onChange)="tableService.onChangePeriod($event)"
+        [dataMenu]="tableService.dataPeriod"
+      ></app-dropdown-menu>
+    </div>
+
+    <div class="app-filters__element">
+      <app-dropdown-menu
+        srcRight="/assets/svg/arrow-down.svg"
+        label="Статус"
+        width="100%"
+        [arrActiveId]="tableService.activeIdStatus"
+        (onChange)="tableService.onChangeStatus($event)"
+        [dataMenu]="tableService.dataStatus"
+      ></app-dropdown-menu>
+    </div>
+
+    <div class="app-filters__element app-filters__element_desktop-display-none">
+      <app-dropdown-menu
+        srcRight="/assets/svg/arrow-down.svg"
+        label="Сортировка"
+        width="100%"
+        [arrActiveId]="arrActiveId"
+        (onChange)="onChangeDropDown($event)"
+        [dataMenu]="dataMenu"
+      ></app-dropdown-menu>
+    </div>
+
+  </div>
+
+  <div class="app-filters__footer">
+    <div class="app-filters__count-session">
+      34 сессии
+    </div>
+
+    <app-button
+      sizeButton="normal"
+      typeButton="text"
+      text="Настроить фильтр"
+      srcImage="/assets/svg/scale.svg"
+    ></app-button>
+
+    <app-button
+      sizeButton="normal"
+      typeButton="text"
+      text="Сбросить"
+      srcImage="/assets/svg/close.svg"
+      color="#0000008A"
+    ></app-button>
+  </div>
 </div>

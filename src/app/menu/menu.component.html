@@ -20,6 +20,7 @@
       class="app-menu__item-img app-menu__item-img_left"
       [src]="item.srcLeftIcon"
       [alt]="item.text"
+      *ngIf="item.srcLeftIcon"
     >
 
     <div class="app-menu__item-text">
@@ -27,6 +28,7 @@
     </div>
 
     <img
+      *ngIf="item.srcRightIcon"
       class="app-menu__item-img app-menu__item-img_right"
       [src]="checkIsMark() && arrActiveId.includes(item.id) ?pathToSvgDone :item.srcRightIcon"
       [alt]="item.text"

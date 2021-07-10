@@ -4,6 +4,7 @@
   border-radius: 4px;
   padding: 8px 0;
   background-color: white;
+  z-index: 1;
 
   &__item-wrap {
     display: flex;
@@ -28,6 +29,7 @@
     flex-grow: 1;
     margin-right: 16px;
     white-space: nowrap;
+    font-size: 12px;
   }
 
   &__item-img {

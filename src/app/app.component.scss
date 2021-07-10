@@ -1,11 +1,12 @@
 @import "shared/variables";
 
-$desktop-body-margin-top: 42px;
-$mobile-body-margin-top: 10px;
+$desktop-body-margin-top: 32px;
+$mobile-body-margin-top: 0px;
 
 .app-root {
   &__body {
     margin-top: $desktop-body-margin-top;
+    padding-bottom: 19px;
 
     @media (max-width: $max-mobile-width) {
       margin-top: $mobile-body-margin-top;
@@ -17,6 +18,22 @@ $mobile-body-margin-top: 10px;
       @media (max-width: $max-mobile-width) {
         margin-top: $size-scroll-header + $mobile-body-margin-top;
       }
+    }
+  }
+
+  &__filter {
+    margin-top: 42px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 16px;
+    }
+  }
+
+  &__table {
+    margin-top: 84px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 34px;
     }
   }
 }

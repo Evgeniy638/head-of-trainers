@@ -6,8 +6,9 @@
       'app-button_secondary': typeButton == 'secondary',
       'app-button_text-type': typeButton == 'text'
     }"
+  [style.background]="getBackground()"
 >
-  <span class="app-button__overlay"></span>
+  <span class="app-button__overlay" [style.background]="color"></span>
   <img
     *ngIf="srcImage"
     class="app-button__image"
@@ -16,5 +17,5 @@
       'app-button__image_margin-right': text
     }"
   >
-  <span *ngIf="text">{{ text }}</span>
+  <span *ngIf="text" [style.color]="getColor()">{{ text }}</span>
 </button>

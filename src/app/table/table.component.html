@@ -1,0 +1,63 @@
+<div class="app-table">
+  <div
+    class="app-table__column"
+    [ngClass]="{
+      'app-table__column_flex-grow': settingsColumns[i].isFlexGrow,
+      'app-table__column_mobile-display-none': settingsColumns[i].isNoneDisplayInMobile,
+      'app-table__column_secondary-color': settingsColumns[i].type === 'percent'
+    }"
+    *ngFor="let column of dataTable; let i = index"
+  >
+    <div
+      class="app-table__cell app-table__cell_head"
+      [ngClass]="{
+        'app-table__cell_mobile-display-none': settingsColumns[i].shortName,
+        'app-table__cell_no-wrap': settingsColumns[i].isNoWrap
+      }"
+    >
+        {{ settingsColumns[i].name }}
+    </div>
+
+    <div
+      *ngIf="settingsColumns[i].shortName"
+      class="app-table__cell app-table__cell_head"
+      [ngClass]="{
+        'app-table__cell_desktop-display-none': settingsColumns[i].shortName,
+        'app-table__cell_no-wrap': settingsColumns[i].isNoWrap
+      }"
+    >
+      {{ settingsColumns[i].shortName }}
+    </div>
+
+    <div
+      class="app-table__cell"
+      *ngFor="let cell of column"
+      [ngClass]="{
+        'app-table__cell_no-wrap': settingsColumns[i].isNoWrap
+      }"
+    >
+      <img
+        *ngIf="settingsColumns[i].type === 'percent'"
+        src="assets/svg/process.svg"
+        alt="process"
+      >
+      {{ cell }}
+      <span
+        *ngIf="settingsColumns[i].type === 'percent'"
+      >%</span>
+    </div>
+
+  </div>
+
+  <div class="app-table__column app-table__column_setting app-table__column_mobile-display-none"></div>
+
+  <div class="overlay-wrap">
+    <div class="overlay-wrap__line" *ngFor="let i of iterateForRows()">
+      <div class="overlay-wrap__overlay"></div>
+      <div class="setting overlay-wrap__setting">
+        <img class="setting__image" src="assets/svg/vertically.svg" alt="verticaly">
+        <div class="setting__overlay"></div>
+      </div>
+    </div>
+  </div>
+</div>

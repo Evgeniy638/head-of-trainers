@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IonRightImageClick} from "../field/field.component";
 import {IMenuItem, TypeMenuItemId} from "../menu/menu.component";
+import {TableService} from "../shared/table.service";
 
 @Component({
   selector: 'app-filters',
@@ -15,6 +15,12 @@ export class FiltersComponent implements OnInit {
     console.log(value)
   }
 
+  arrActiveId: TypeMenuItemId[] = [1];
+
+  onChangeDropDown(arrId: TypeMenuItemId[]) {
+    this.arrActiveId = arrId;
+  }
+
   onRightClick() {
     console.log("image")
   }
@@ -22,26 +28,20 @@ export class FiltersComponent implements OnInit {
   dataMenu: IMenuItem[] = [
     {
       id: 1,
-      text: "Привет Привет",
-      srcLeftIcon: "/assets/svg/add.svg",
-      srcRightIcon: "/assets/svg/add.svg",
+      text: "Привет Привет"
     },
     {
       id: 2,
-      text: "Привет",
-      srcLeftIcon: "/assets/svg/add.svg",
-      srcRightIcon: "/assets/svg/add.svg",
+      text: "Привет"
     },
     {
       id: 3,
-      text: "Привет",
-      srcLeftIcon: "/assets/svg/add.svg",
-      srcRightIcon: "/assets/svg/add.svg",
+      text: "Привет"
     }
     ]
 
 
-  constructor() { }
+  constructor(public tableService: TableService) { }
 
   ngOnInit(): void {
   }
