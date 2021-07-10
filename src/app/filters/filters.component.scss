@@ -1,13 +1,56 @@
+@import "src/app/shared/variables";
+
 .app-filters {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  &__main {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    @media (max-width: $max-mobile-width) {
+      display: block;
+    }
+  }
 
   &__element {
     margin-right: 30px;
+    width: 166px;
+    margin-top: 26px;
 
     &_display-none {
       display: none;
     }
+
+    &_desktop-display-none {
+      display: none;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+      margin-right: 0;
+
+      &_mobile-display-none {
+        display: none;
+      }
+
+      &_desktop-display-none {
+        display: block;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+
+    @media (max-width: $max-mobile-width) {
+      display: none;
+    }
+  }
+
+  &__count-session {
+    margin-right: 76px;
+    color: var(--ligth-theme-secondary);
+    font-size: 12px;
   }
 }

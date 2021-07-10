@@ -78,6 +78,7 @@ $margin-cell: 4px;
   width: 100%;
   height: 100%;
   padding-top: $height-row;
+  box-sizing: border-box;
 
   &__line {
     position: relative;

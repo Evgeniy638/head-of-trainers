@@ -6,6 +6,7 @@ $mobile-body-margin-top: 0px;
 .app-root {
   &__body {
     margin-top: $desktop-body-margin-top;
+    padding-bottom: 19px;
 
     @media (max-width: $max-mobile-width) {
       margin-top: $mobile-body-margin-top;
@@ -25,6 +26,14 @@ $mobile-body-margin-top: 0px;
 
     @media (max-width: $max-mobile-width) {
       margin-top: 16px;
+    }
+  }
+
+  &__table {
+    margin-top: 84px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 34px;
     }
   }
 }
