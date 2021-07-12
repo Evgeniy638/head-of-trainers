@@ -16,6 +16,7 @@ import { TableComponent } from './table/table.component';
 import { MainComponent } from './main/main.component';
 import { FilterSettingComponent } from './filter-setting/filter-setting.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     TableComponent,
     MainComponent,
     FilterSettingComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    SidePanelComponent
   ],
   imports: [
     BrowserModule,

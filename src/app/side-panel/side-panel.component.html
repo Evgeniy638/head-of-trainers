@@ -1,0 +1,28 @@
+<div
+  *ngIf="isVisible"
+  class="blackout"
+  (click)="onClose.emit()"
+></div>
+
+<div *ngIf="isVisible" class="app-side-panel" [style.max-width]="maxWidth">
+  <div class="app-side-panel__header header">
+    <h2 class="header__title">
+      {{ title }}
+    </h2>
+
+    <div class="header__image-wrap" (click)="onDone.emit()">
+      <img class="header__image" src="assets/svg/done.svg" alt="done">
+    </div>
+
+    <div class="header__image-wrap" (click)="onClose.emit()">
+      <img class="header__image" src="assets/svg/close.svg" alt="close">
+    </div>
+  </div>
+
+  <div class="app-side-panel__main">
+    <ng-component
+      *ngTemplateOutlet="mainTemplate"
+    ></ng-component>
+  </div>
+
+</div>
