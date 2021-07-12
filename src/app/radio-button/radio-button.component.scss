@@ -1,0 +1,27 @@
+.radio-button {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__image {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-gray);
+    border-radius: 100%;
+
+    &_active {
+      background-image: url("~src/assets/svg/radio-button-active.svg");
+    }
+  }
+
+  &__text {
+    margin-left: 16px;
+    font-size: 12px;
+    color: var(--ligth-theme-secondary);
+
+    &_active {
+      color: var(--ligth-theme-primary);
+    }
+  }
+}

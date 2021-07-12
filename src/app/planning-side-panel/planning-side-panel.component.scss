@@ -1,0 +1,43 @@
+.main {
+  padding: 24px 14px 9px 24px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__program {
+    margin-bottom: 42px;
+  }
+
+  &__event-and-date {
+
+  }
+
+  &__conditions-by-code {
+
+  }
+}
+
+.event-and-date {
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__training {
+
+  }
+
+  &__wrap-date-and-trainer {
+
+  }
+}
+
+.conditions-by-code {
+  &__title {
+    margin-bottom: 8px;
+  }
+}

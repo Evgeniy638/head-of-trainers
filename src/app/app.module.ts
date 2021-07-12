@@ -17,6 +17,8 @@ import { MainComponent } from './main/main.component';
 import { FilterSettingComponent } from './filter-setting/filter-setting.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { SidePanelComponent } from './side-panel/side-panel.component';
+import { PlanningSidePanelComponent } from './planning-side-panel/planning-side-panel.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
     MainComponent,
     FilterSettingComponent,
     CheckboxComponent,
-    SidePanelComponent
+    SidePanelComponent,
+    PlanningSidePanelComponent,
+    RadioButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,7 @@ export class TabsComponent implements OnInit {
   @Input() dataTabs: ITab[] = [];
   @Output() onChangeActiveTab = new EventEmitter<typeTabId>();
   @Input() activeTabId: typeTabId = '';
+  @Input() paddingList: string = "0";
 
   onClick(id: typeTabId) {
     this.onChangeActiveTab.emit(id);

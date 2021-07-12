@@ -1,0 +1,16 @@
+<div class="radio-button" (click)="onClick.emit(id)">
+  <div
+    class="radio-button__image"
+    [ngClass]="{
+      'radio-button__image_active': isActive()
+    }"
+  ></div>
+  <p
+    class="radio-button__text"
+    [ngClass]="{
+      'radio-button__text_active': isActive()
+    }"
+  >
+    {{ text }}
+  </p>
+</div>

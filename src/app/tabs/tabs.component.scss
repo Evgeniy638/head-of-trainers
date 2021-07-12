@@ -7,8 +7,11 @@
     color: var(--ligth-theme-secondary);
     margin-right: 24px;
     cursor: pointer;
-    padding-bottom: 8px;
+    height: 36px;
+    box-sizing: border-box;
     font-size: 12px;
+    display: flex;
+    align-items: center;
 
     &_active {
       color: var(--primary-black);

@@ -1,0 +1,54 @@
+<ng-template #refPlanningSidePanel>
+  <section>
+    <app-tabs
+      [activeTabId]="activeTabId"
+      (onChangeActiveTab)="onChangeActiveTab($event)"
+      [dataTabs]="dataTabs"
+      paddingList="0 24px"
+    ></app-tabs>
+
+    <div class="main">
+      <div class="main__program">
+        <app-dropdown-menu
+          srcRight="assets/svg/arrow-down.svg"
+          width="100%"
+          label="Программа"
+        ></app-dropdown-menu>
+      </div>
+
+      <div class="main__event-and-date">
+        <h3 class="main__title event-and-date__title">
+          Мероприятие, дата и время проведения
+        </h3>
+
+        <div class="event-and-date__training">
+
+          <div class="event-and-date__wrap-date-and-trainer">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="main__conditions-by-code">
+        <h3 class="main__title conditions-by-code__title">
+          Условия записи по коду
+        </h3>
+
+        <app-radio-button
+          *ngFor="let data of dataRadioButtons"
+          [activeId]="activeRadioId"
+          [id]="data.id"
+          [text]="data.text"
+          (onClick)="onChangeActiveRadioButton($event)"
+        ></app-radio-button>
+      </div>
+    </div>
+  </section>
+</ng-template>
+
+<app-side-panel
+  title="Планирование"
+  maxWidth="866px"
+  [isVisible]="isVisible"
+  [mainTemplate]="refPlanningSidePanel"
+></app-side-panel>
