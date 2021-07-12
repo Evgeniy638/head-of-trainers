@@ -1,25 +1,13 @@
-<div
-  *ngIf="filterSettingService.isVisible()"
-  class="blackout"
-  (click)="filterSettingService.changeVisible(false)"
-></div>
+<app-side-panel
+  [mainTemplate]="main"
+  title="Настройка фильтра"
+  [maxWidth]="'410px'"
+  [isVisible]="filterSettingService.isVisible()"
+  (onDone)="filterSettingService.changeVisible(false)"
+  (onClose)="filterSettingService.changeVisible(false)"
+></app-side-panel>
 
-<div *ngIf="filterSettingService.isVisible()" class="app-filter-setting">
-  <div class="app-filter-setting__header header">
-    <h2 class="header__title">
-      Настройка фильтра
-    </h2>
-
-    <div class="header__image-wrap" (click)="filterSettingService.changeVisible(false)">
-      <img class="header__image" src="assets/svg/done.svg" alt="done">
-    </div>
-
-    <div class="header__image-wrap" (click)="filterSettingService.changeVisible(false)">
-      <img class="header__image" src="assets/svg/close.svg" alt="close">
-    </div>
-  </div>
-
-  <div class="app-filter-setting__main">
+<ng-template #main>
     <div class="main-container">
       <h3 class="main-container__title">
         Системные поля
@@ -55,6 +43,4 @@
       </div>
 
     </div>
-  </div>
-
-</div>
+</ng-template>
